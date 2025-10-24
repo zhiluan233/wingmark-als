@@ -56,7 +56,12 @@ onMounted(async () => {
     <n-global-style />
     <n-message-provider>
       <n-space vertical>
-        <h2>Looking Glass Server</h2>
+        <h2>
+          Wingmark Looking Glass
+          <template v-if="appStore.config?.server_id">
+            - {{ appStore.config.server_id }}
+          </template>
+        </h2>
         <LoadingCard v-if="appStore.connecting" />
         <template v-else>
           <InfoCard />
@@ -67,6 +72,7 @@ onMounted(async () => {
         <n-space justify="space-between">
           <div>
             <div style="margin-top: 10px">
+              Copyright © 2025 Wingmark Matrix (Wuhan) Computer Systems Co., Ltd.
               Powered by
               <n-button
                 text

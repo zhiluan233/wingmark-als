@@ -12,6 +12,7 @@ func LoadFromEnv() {
 		"LISTEN_IP":       &Config.ListenHost,
 		"HTTP_PORT":       &Config.ListenPort,
 		"LOCATION":        &Config.Location,
+		"SERVER_ID":	   &Config.ServerId,
 		"PUBLIC_IPV4":     &Config.PublicIPv4,
 		"PUBLIC_IPV6":     &Config.PublicIPv6,
 		"SPONSOR_MESSAGE": &Config.SponsorMessage,
@@ -25,6 +26,7 @@ func LoadFromEnv() {
 	envVarsBool := map[string]*bool{
 		"DISPLAY_TRAFFIC":           &Config.FeatureIfaceTraffic,
 		"ENABLE_SPEEDTEST":          &Config.FeatureLibrespeed,
+		"ENABLE_FILESPEEDTEST":		 &Config.FeatureFileSpeedtest,
 		"UTILITIES_SPEEDTESTDOTNET": &Config.FeatureSpeedtestDotNet,
 		"UTILITIES_PING":            &Config.FeaturePing,
 		"UTILITIES_FAKESHELL":       &Config.FeatureShell,
