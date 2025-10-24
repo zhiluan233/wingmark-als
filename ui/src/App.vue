@@ -96,9 +96,9 @@ onMounted(async () => {
                 text
                 tag="a"
                 target="_blank"
-                href="https://github.com/wikihost-opensource/als"
+                href="https://github.com/zhiluan233/wingmark-als"
               >
-                WIKIHOST Opensource - ALS (Github)
+                Zhiluan Opensource - WINGMARK ALS (Github)
               </n-button>
             </div>
             <div>
