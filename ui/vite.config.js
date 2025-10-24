@@ -45,7 +45,7 @@ export default defineConfig(({ command }) => {
           if (command === 'build') {
             const dirPath = path.join(__dirname, 'public');
             const fileBuildRequired = {
-              "favicon.png": "../public/favicon.png",
+              "favicon.png": "../favicon.png",
               "speedtest_worker.js": "../speedtest/speedtest_worker.js"
             };
 
