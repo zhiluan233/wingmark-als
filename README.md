@@ -9,8 +9,8 @@ Language: English | [简体中文](README_zh_CN.md)
 ```
 docker run -d --name looking-glass --restart always --network host ghcr.io/zhiluan233/wingmark-als:latest
 ```
-
-[DEMO](http://looking-glass.wingmark.cn/)
+Click "Looking Glass" item enter 
+[DEMO](https://backbone.wingmark.cn/)
 
 ## Host Requirements
  - RAM: 32MB or more
