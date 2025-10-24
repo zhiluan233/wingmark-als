@@ -75,7 +75,7 @@ onMounted(async () => {
       <n-space vertical>
         <div style="display: flex; justify-content: space-between; align-items: center;">
           <h2 style="margin: 0;">
-            <template v-if="appStore.config?.brand"> </template>Looking Glass
+            <template v-if="appStore.config?.brand">{{ appStore.config.brand }} </template>Looking Glass
             <template v-if="appStore.config?.server_id">
               - {{ appStore.config.server_id }}
             </template>
