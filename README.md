@@ -6,8 +6,17 @@ Language: English | [简体中文](README_zh_CN.md)
 # Based on ALS - Another Looking-glass Server
 
 ## Quick start
+### Docker
 ```
 docker run -d --name looking-glass --restart always --network host ghcr.io/zhiluan233/wingmark-als:latest
+```
+### Docker Compose
+```
+mkdir looking-glass
+cd looking-glass
+git clone https://github.com/zhiluan233/wingmark-als.git
+cd wingmark-als
+docker-compose up -d
 ```
 Click "Looking Glass" item enter 
 [DEMO](https://backbone.wingmark.cn/)
