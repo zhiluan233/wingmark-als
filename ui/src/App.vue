@@ -92,7 +92,7 @@ onMounted(async () => {
           <div>
             <div style="margin-top: 10px">
               <template v-if="appStore.config?.footer">
-                {{ appStore.config.footer }}<br />
+                <div v-html="appStore.config.footer"></div><br />
               </template>
               Powered by
               <n-button
