@@ -1,7 +1,7 @@
 {
   "server_info": "Server Information",
   "server_location": "Server location",
-  "server_speedtest": "Server Network Speed Test",
+  "server_speedtest": "Server Network Speed Test (To Client)",
   "file_speedtest": "File Download Test",
   "file_ipv4_speedtest": "IPv4 Download Test",
   "file_ipv6_speedtest": "IPv6 Download Test",
