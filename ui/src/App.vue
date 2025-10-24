@@ -79,11 +79,6 @@ onMounted(async () => {
               - {{ appStore.config.server_id }}
             </template>
           </h2>
-          <n-button circle @click="toggleTheme" type="primary" quaternary>
-            <n-icon size="20">
-              <component :is="theme === darkTheme ? SunnyOutline : MoonOutline" />
-            </n-icon>
-          </n-button>
         </div>
         <LoadingCard v-if="appStore.connecting" />
         <template v-else>
@@ -95,7 +90,7 @@ onMounted(async () => {
         <n-space justify="space-between">
           <div>
             <div style="margin-top: 10px">
-              Copyright © 2025 Wingmark Matrix (Wuhan) Computer Systems Co., Ltd. <br/>
+              Copyright © 2025 Wingmark Matrix (Wuhan) Computer Systems Co., Ltd. <br />
               Powered by
               <n-button
                 text
