@@ -72,8 +72,8 @@ func SetupHttpRoute(e *gin.Engine) {
 		handleStatisFile("speedtest_worker.js", c)
 	})
 
-	e.GET("/favicon.ico", func(c *gin.Context) {
-		handleStatisFile("favicon.ico", c)
+	e.GET("/favicon.png", func(c *gin.Context) {
+		handleStatisFile("favicon.png", c)
 	})
 }
 

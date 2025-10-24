@@ -55,6 +55,11 @@ func SetupInterfaceBroadcast() {
 				continue
 			}
 
+			// skip br
+			if strings.Index(iface.Name, "br") == 0 {
+				continue
+			}
+
 			link, err := netlink.LinkByIndex(iface.Index)
 			if err != nil {
 				continue
