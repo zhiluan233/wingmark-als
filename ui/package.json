@@ -36,6 +36,7 @@
     "vue-i18n": "9",
     "vue3-apexcharts": "^1.4.4",
     "vue3-markdown-it": "^1.0.10",
-    "xterm": "^5.3.0"
+    "xterm": "^5.3.0",
+    "@vicons/ionicons5": "^0.12.0"
   }
 }

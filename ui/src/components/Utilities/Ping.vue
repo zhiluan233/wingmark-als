@@ -56,7 +56,7 @@ const ping = async () => {
       <n-input
         :disabled="working"
         v-model:value="host"
-        placeholder="IP Address Or Domain"
+        placeholder="IP Address or Domain"
         @keyup.enter="ping"
       />
       <n-button :type="working ? 'error' : 'primary'" ghost @click="working ? stopPing() : ping()">

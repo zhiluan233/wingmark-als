@@ -8,6 +8,7 @@ import SpeedtestCard from '@/components/Speedtest.vue'
 import UtilitiesCard from '@/components/Utilities.vue'
 import TrafficCard from '@/components/TrafficDisplay.vue'
 import { computed } from 'vue'
+import { MoonOutline, SunnyOutline } from '@vicons/ionicons5'
 
 const lang = computed(() => {
   return currentLang.value.uiLang()
@@ -43,7 +44,22 @@ const handleLangChange = async () => {
 }
 
 const osThemeRef = useOsTheme()
-const theme = computed(() => (osThemeRef.value === 'dark' ? darkTheme : null))
+const userTheme = ref(localStorage.getItem('theme') || 'auto')
+const theme = computed(() => {
+  if (userTheme.value === 'dark') return darkTheme
+  if (userTheme.value === 'light') return null
+  return osThemeRef.value === 'dark' ? darkTheme : null // auto 模式：跟随系统
+})
+
+const toggleTheme = () => {
+  userTheme.value =
+    userTheme.value === 'auto'
+      ? osThemeRef.value === 'dark' ? 'light' : 'dark'
+      : userTheme.value === 'dark'
+      ? 'light'
+      : 'dark'
+  localStorage.setItem('theme', userTheme.value)
+}
 const appStore = useAppStore()
 
 onMounted(async () => {
@@ -56,12 +72,19 @@ onMounted(async () => {
     <n-global-style />
     <n-message-provider>
       <n-space vertical>
-        <h2>
-          Wingmark Looking Glass
-          <template v-if="appStore.config?.server_id">
-            - {{ appStore.config.server_id }}
-          </template>
-        </h2>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <h2 style="margin: 0;">
+            Wingmark Looking Glass
+            <template v-if="appStore.config?.server_id">
+              - {{ appStore.config.server_id }}
+            </template>
+          </h2>
+          <n-button circle @click="toggleTheme" type="primary" quaternary>
+            <n-icon size="20">
+              <component :is="theme === darkTheme ? SunnyOutline : MoonOutline" />
+            </n-icon>
+          </n-button>
+        </div>
         <LoadingCard v-if="appStore.connecting" />
         <template v-else>
           <InfoCard />

@@ -6,7 +6,7 @@ func setupPrompt(m *console.Menu) {
 	p := m.Prompt()
 
 	p.Primary = func() string {
-		prompt := "\x1b[33mALS\x1b[0m > "
+		prompt := "\x1b[33mWingmark-Matrix\x1b[0m > "
 		return prompt
 	}
 
