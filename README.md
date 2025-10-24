@@ -1,18 +1,16 @@
-[![docker image build](https://github.com/wikihost-opensource/als/actions/workflows/docker-image.yml/badge.svg)](https://github.com/wikihost-opensource/als/actions/workflows/docker-image.yml)
+[![docker image build](https://github.com/zhiluan233/wingmark-als/actions/workflows/docker-image.yml/badge.svg)](https://github.com/zhiluan233/wingmark-als/actions/workflows/docker-image.yml)
 
 
 Language: English | [简体中文](README_zh_CN.md)
 
-# ALS - Another Looking-glass Server
+# Based on ALS - Another Looking-glass Server
 
 ## Quick start
 ```
-docker run -d --name looking-glass --restart always --network host wikihostinc/looking-glass-server
+docker run -d --name looking-glass --restart always --network host ghcr.io/zhiluan233/wingmark-als:latest
 ```
 
-[DEMO](http://lg.hk1-bgp.hkg.50network.com/)
-
-If you don't want to use Docker , you can use the [compiled server](https://github.com/wikihost-opensource/als/releases)
+[DEMO](http://looking-glass.wingmark.cn/)
 
 ## Host Requirements
  - RAM: 32MB or more
@@ -37,10 +35,12 @@ docker run -d \
 | HTTP_PORT                 | 80                                                                     | 80                                                         | which HTTP port should use                                                              |
 | SPEEDTEST_FILE_LIST       | 100MB 1GB                                                              | 1MB 10MB 100MB 1GB                                         | size of static test files, separate with space                                          |
 | LOCATION                  | "this is location"                                                     | (request from http://ipapi.co) | location string                                                                         |
+| SERVER_ID                 | "server id on title"                                                   | sgp-01                         | location string                                                                         |
 | PUBLIC_IPV4               | 1.1.1.1                                                                | (fetch from http://ifconfig.co)                            | The IPv4 address of the server                                                          |
 | PUBLIC_IPV6               | fe80::1                                                                | (fetch from http://ifconfig.co)                            | The IPv6 address of the server                                                          |
 | DISPLAY_TRAFFIC           | true                                                                   | true                                                       | Toggle the streaming traffic graph                                                      |
 | ENABLE_SPEEDTEST          | true                                                                   | true                                                       | Toggle the speedtest feature                                                            |
+| ENABLE_FILESPEEDTEST      | true                                                                   | true                                                       | Toggle the file download speedtest feature                                              |
 | UTILITIES_PING            | true                                                                   | true                                                       | Toggle the ping feature                                                                 |
 | UTILITIES_SPEEDTESTDOTNET | true                                                                   | true                                                       | Toggle the speedtest.net feature                                                        |
 | UTILITIES_FAKESHELL       | true                                                                   | true                                                       | Toggle the HTML Shell feature                                                           |
@@ -63,12 +63,9 @@ https://github.com/librespeed/speedtest
 
 https://www.jetbrains.com/
 
+https://github.com/wikihost-opensource/als
+
 ## License
 
 Code is licensed under MIT Public License.
 
-* If you wish to support my efforts, keep the "Powered by WIKIHOST Opensource - ALS" link intact.
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=wikihost-opensource/als&type=Date)](https://star-history.com/#wikihost-opensource/als&Date)
