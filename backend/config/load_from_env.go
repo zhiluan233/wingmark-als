@@ -13,6 +13,8 @@ func LoadFromEnv() {
 		"HTTP_PORT":       &Config.ListenPort,
 		"LOCATION":        &Config.Location,
 		"SERVER_ID":	   &Config.ServerId,
+		"Footer":		   &Config.Footer,
+		"Brand":	 	   &Config.Brand,
 		"PUBLIC_IPV4":     &Config.PublicIPv4,
 		"PUBLIC_IPV6":     &Config.PublicIPv6,
 		"SPONSOR_MESSAGE": &Config.SponsorMessage,

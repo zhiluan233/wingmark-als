@@ -74,6 +74,17 @@ func defineMenuCommands(a *console.Console) console.Commands {
 			Hidden: true,
 		})
 
+		helpCmd := &cobra.Command{
+			Use:     "help",
+			Aliases: []string{"?"},
+			Short:   "Show help",
+			Run: func(cmd *cobra.Command, args []string) {
+				rootCmd.Help()
+			},
+			DisableFlagParsing: true,
+		}
+		rootCmd.AddCommand(helpCmd)
+
 		return rootCmd
 	}
 }

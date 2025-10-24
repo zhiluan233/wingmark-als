@@ -17,6 +17,8 @@ type ALSConfig struct {
 
 	Location string `json:"location"`
 	ServerId string `json:"server_id"`
+	Footer string `json:"footer"`
+	Brand string `json:"brand"`
 
 	PublicIPv4 string `json:"public_ipv4"`
 	PublicIPv6 string `json:"public_ipv6"`
@@ -45,6 +47,9 @@ func GetDefaultConfig() *ALSConfig {
 		ListenPort:      "80",
 		Location:        "",
 		ServerId:		 "",
+		Footer:          "",
+		Brand:			 "",
+		
 		Iperf3StartPort: 30000,
 		Iperf3EndPort:   31000,
 

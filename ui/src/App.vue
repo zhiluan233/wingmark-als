@@ -65,6 +65,7 @@ const appStore = useAppStore()
 onMounted(async () => {
   currentLangCode.value = await autoLang()
 })
+// Copyright © 2025 Wingmark Matrix (Wuhan) Computer Systems Co., Ltd.
 </script>
 
 <template>
@@ -74,7 +75,7 @@ onMounted(async () => {
       <n-space vertical>
         <div style="display: flex; justify-content: space-between; align-items: center;">
           <h2 style="margin: 0;">
-            Wingmark Looking Glass
+            <template v-if="appStore.config?.brand"> </template>Looking Glass
             <template v-if="appStore.config?.server_id">
               - {{ appStore.config.server_id }}
             </template>
@@ -90,7 +91,9 @@ onMounted(async () => {
         <n-space justify="space-between">
           <div>
             <div style="margin-top: 10px">
-              Copyright © 2025 Wingmark Matrix (Wuhan) Computer Systems Co., Ltd. <br />
+              <template v-if="appStore.config?.footer">
+                {{ appStore.config.footer }}<br />
+              </template>
               Powered by
               <n-button
                 text
