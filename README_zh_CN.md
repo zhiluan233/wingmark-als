@@ -1,21 +1,19 @@
-[![docker image build](https://github.com/wikihost-opensource/als/actions/workflows/docker-image.yml/badge.svg)](https://github.com/wikihost-opensource/als/actions/workflows/docker-image.yml)
+[![docker image build](https://github.com/zhiluan233/wingmark-als/actions/workflows/docker-image.yml/badge.svg)](https://github.com/zhiluan233/wingmark-als/actions/workflows/docker-image.yml)
 
 
 语言: [English](README.md) | 简体中文
 
-# ALS - 另一个 Looking-glass 服务器
+# 基于ALS - 另一个 Looking-glass 服务器 修改并二次开发
 
 ## 快速开始 (Docker 环境)
 ```
-docker run -d --name looking-glass --restart always --network host wikihostinc/looking-glass-server
+docker run -d --name looking-glass --restart always --network host ghcr.io/zhiluan233/wingmark-als:latest
 ```
 
-[DEMO](http://lg.hk1-bgp.hkg.50network.com/)
-
-如果不想使用 Docker , 您可以使用编译好的[服务器端](https://github.com/wikihost-opensource/als/releases)
+[DEMO](http://looking-glass.wingmark.cn/)
 
 ## 配置要求
- - 内存: 32MB 或更好
+ - 内存: 32MB 或更多
 
 ## 如何修改配置
 ```
@@ -37,10 +35,12 @@ docker run -d \
 | HTTP_PORT                 | 80                                                                     | 80                                                         | 监听在哪一个端口上                                                              |
 | SPEEDTEST_FILE_LIST       | 100MB 1GB                                                              | 1MB 10MB 100MB 1GB                                         | 静态文件大小列表, 使用空格隔开                                          |
 | LOCATION                  | "this is location"                                                     | (请求 ipapi.co 获取) | 服务器位置的文本                                                                         |
+| SERVER_ID                 | "server id on title"                                                   | sgp-01              | 标题旁服务器ID的文本                                                                     |
 | PUBLIC_IPV4               | 1.1.1.1                                                                | (从在线获取)                            | 服务器的 IPv4 地址                                                          |
 | PUBLIC_IPV6               | fe80::1                                                                | (从在线获取)                            | 服务器的 IPv6 地址                                                          |
 | DISPLAY_TRAFFIC           | true                                                                   | true                                                       | 实时流量开关                                                      |
 | ENABLE_SPEEDTEST          | true                                                                   | true                                                       | 测速功能开关                                                            |
+| ENABLE_FILESPEEDTEST      | true                                                                   | true                                                       | 文件下载测速功能开关                                              |
 | UTILITIES_PING            | true                                                                   | true                                                       | Ping 功能开关                                                                 |
 | UTILITIES_SPEEDTESTDOTNET | true                                                                   | true                                                       | Speedtest.net 功能开关                                                        |
 | UTILITIES_FAKESHELL       | true                                                                   | true                                                       | Shell 功能开关                                                           |
@@ -63,12 +63,8 @@ https://github.com/librespeed/speedtest
 
 https://www.jetbrains.com/
 
+https://github.com/wikihost-opensource/als
+
 ## License
 
 Code is licensed under MIT Public License.
-
-* If you wish to support my efforts, keep the "Powered by WIKIHOST Opensource - ALS" link intact.
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=wikihost-opensource/als&type=Date)](https://star-history.com/#wikihost-opensource/als&Date)
