@@ -37,6 +37,8 @@ docker run -d \
 | SPEEDTEST_FILE_LIST       | 100MB 1GB                                                              | 1MB 10MB 100MB 1GB                                         | 静态文件大小列表, 使用空格隔开                                          |
 | LOCATION                  | "this is location"                                                     | (请求 ipapi.co 获取) | 服务器位置的文本                                                                         |
 | SERVER_ID                 | "server id on title"                                                   | sgp-01              | 标题旁服务器ID的文本                                                                     |
+| BRAND                     | "title brand part"                                                     | Wingmark Matrix                | 标题前品牌名（会自动拼接Looking Glass                                                     |
+| FOOTER                    | "footer part in page"                                                  | Copyright 2025 xxxx            | 页脚部分（支持HTML换行）                                                                 |
 | PUBLIC_IPV4               | 1.1.1.1                                                                | (从在线获取)                            | 服务器的 IPv4 地址                                                          |
 | PUBLIC_IPV6               | fe80::1                                                                | (从在线获取)                            | 服务器的 IPv6 地址                                                          |
 | DISPLAY_TRAFFIC           | true                                                                   | true                                                       | 实时流量开关                                                      |
