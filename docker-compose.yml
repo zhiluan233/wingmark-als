@@ -1,0 +1,28 @@
+# Wingmark Looking Glass Docker Compose Configuration
+# 
+# Quick Start:
+#   1. docker-compose up -d
+#   2. Access at http://localhost:8080
+#
+# By Wingmark Matrix
+#
+
+version: "3"
+
+services:
+  looking-glass:
+    image: ghcr.io/zhiluan233/wingmark-als:latest
+    container_name: looking-glass
+    network_mode: host
+    restart: always
+    environment:
+      ENABLE_SPEEDTEST: "true"
+      ENABLE_FILESPEEDTEST: "true"
+      UTILITIES_SPEEDTESTDOTNET: "true"
+      UTILITIES_IPERF3: "true"
+      LOCATION: "Wingmark Matrix, Singapore"
+      SERVER_ID: "NODE_TEST01"
+      BRAND: "Wingmark "
+      FOOTER: "Copyright © 2025 Wingmark Matrix (Wuhan) Computer Systems Co., Ltd."
+      PUBLIC_IPV4: "1.2.3.4"
+      HTTP_PORT: "8080"
