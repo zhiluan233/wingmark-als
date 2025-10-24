@@ -95,7 +95,7 @@ onMounted(async () => {
         <n-space justify="space-between">
           <div>
             <div style="margin-top: 10px">
-              Copyright © 2025 Wingmark Matrix (Wuhan) Computer Systems Co., Ltd.
+              Copyright © 2025 Wingmark Matrix (Wuhan) Computer Systems Co., Ltd. <br/>
               Powered by
               <n-button
                 text
