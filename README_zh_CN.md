@@ -9,8 +9,9 @@
 ```
 docker run -d --name looking-glass --restart always --network host ghcr.io/zhiluan233/wingmark-als:latest
 ```
-
-[DEMO](http://looking-glass.wingmark.cn/)
+点击 
+[DEMO](http://backbone.wingmark.cn/) 
+中的任意一个Looking Glass项目查看Demo
 
 ## 配置要求
  - 内存: 32MB 或更多
