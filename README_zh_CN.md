@@ -6,8 +6,17 @@
 # 基于ALS - 另一个 Looking-glass 服务器 修改并二次开发
 
 ## 快速开始 (Docker 环境)
+### Docker
 ```
 docker run -d --name looking-glass --restart always --network host ghcr.io/zhiluan233/wingmark-als:latest
+```
+### Docker Compose
+```
+mkdir looking-glass
+cd looking-glass
+git clone https://github.com/zhiluan233/wingmark-als.git
+cd wingmark-als
+docker-compose up -d
 ```
 点击 
 [DEMO](http://backbone.wingmark.cn/) 
